@@ -123,9 +123,10 @@ export default function ButtonForm({ page, user }) {
           })}
         </ReactSortable>
         <div className="flex flex-wrap gap-2 border-t pt-4">
-          {availabelButtons.map((b) => {
+          {availabelButtons.map((b,index) => {
             return (
               <button
+              key={index}
                 onClick={() => addButtontoProfile(b)}
                 className="capitalize flex gap-1 p-2 bg-gray-200 justify-center items-center"
               >

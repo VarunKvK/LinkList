@@ -22,9 +22,9 @@ export default async function Profile(url){
     if(page){
         return(
             <>
-            <PageSettingForm user={session?.user} page={page}/>
-            <ButtonForm user={session?.user} page={page}/>
-            <LinksForm user={session?.user} page={page}/>
+            <PageSettingForm user={session?.user} page={leanPage}/>
+            <ButtonForm user={session?.user} page={leanPage}/>
+            <LinksForm user={session?.user} page={leanPage}/>
             </>
         )
     }
