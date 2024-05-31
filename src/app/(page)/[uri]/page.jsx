@@ -74,9 +74,10 @@ export default async function UserPage({ params }) {
         <p className="text-white">{page.bio}</p>
       </div>
       <div className="flex gap-2 justify-center items-center mt-1 pb-6">
-        {Object.keys(page.buttons).map((button) => {
+        {Object.keys(page.buttons).map((button,index) => {
           return (
             <Link
+            key={index}
               href={"/"}
               className="rounded-full bg-white p-2 flex justify-center items-center"
             >
@@ -89,10 +90,10 @@ export default async function UserPage({ params }) {
         })}
       </div>
       <div className="max-w-2xl mx-auto grid md:grid-cols-2 gap-4 p-4 px-8">
-        {page.links.map((link) => {
+        {page.links.map((link,index) => {
           return (
             <Link
-              key={link.url}
+              key={index}
               target="_blank"
               ping={
                 process.env.URL +
